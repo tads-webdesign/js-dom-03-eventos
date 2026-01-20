@@ -98,13 +98,14 @@ document.getElementById('meuForm').addEventListener('submit', function(event) {
 ```
 
 ### 3. Keypress
-Disparado quando uma tecla é pressionada (note: `keydown` e `keyup` são alternativas modernas).
+Disparado quando uma tecla é pressionada. **Nota importante:** O evento `keypress` está obsoleto (deprecated). Prefira usar `keydown` ou `keyup` em código novo.
 
 ```html
 <input type="text" id="campoTexto" placeholder="Digite algo">
 
 <script>
-document.getElementById('campoTexto').addEventListener('keypress', function(event) {
+// Recomendado: usar keydown em vez de keypress
+document.getElementById('campoTexto').addEventListener('keydown', function(event) {
     console.log('Tecla pressionada: ' + event.key);
 });
 </script>
@@ -616,8 +617,8 @@ Aqui está um exemplo completo que combina todos os conceitos aprendidos:
 
 ### Como usar este exemplo:
 
-1. **Copie o código** acima em um arquivo HTML (por exemplo, `formulario.html`)
-2. **Abra o arquivo** em um navegador web
+1. **Abra o arquivo** `exemplo-formulario.html` incluído neste repositório em um navegador web
+2. **Ou copie o código** acima em um novo arquivo HTML (por exemplo, `meu-formulario.html`)
 3. **Interaja com o formulário** para ver:
    - Validação em tempo real
    - Mudanças de cor ao focar nos campos

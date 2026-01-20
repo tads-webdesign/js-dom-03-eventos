@@ -320,7 +320,10 @@
             }
         });
         
-        // Prevenir propagação de eventos em elementos específicos
+        // Exemplo educacional de stopPropagation()
+        // Em uma aplicação real, este listener seria usado apenas se houvesse
+        // elementos pais que também respondem ao evento de click e você quisesse
+        // evitar que o evento "suba" para eles
         btnEnviar.addEventListener('click', function(event) {
             // Este evento não se propagará para elementos pais
             event.stopPropagation();
